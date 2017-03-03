@@ -1,3 +1,9 @@
+//Team Minotaurs
+//Donia Tung, Joshel Xiedeng, Connie Lei
+//APCS2 pd1
+//HW#12 -- Thinkers of the Corn
+//2017-03-02
+
 /***
  * SKEELTON for class 
  * MazeSolver
