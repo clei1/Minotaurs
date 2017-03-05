@@ -15,7 +15,7 @@
  * (mazefile is ASCII representation of maze, using symbols below)
  * 
  * ALGORITHM for finding exit from starting position:
- *  <INSERT YOUR SUMMARY OF ALGO HERE>
+ * We start at a random path area. Then we check if the spot is within the limits of the board. If it is, then we check for the exit, if it isn't the exit, we check if it is a path. If we find that it is the exit, we set solved to true. Afterwards, we just use the branches and se the spot to "@". 
  ***/
 
 //enable file I/O
@@ -121,7 +121,7 @@ class MazeSolver
 	    System.exit(0);
 	}
 	//other base case(s)...
-	else if ( x < 0 || x >=h || y < 0 || y >= w ) {	    
+	else if ( x < 0 || x > = h || y < 0 || y > = w ) {	    
 	}
 	else if ( maze[x][y] == '$' ) {
 	    solved = true;
@@ -130,15 +130,11 @@ class MazeSolver
 	}
 	//recursive reduction
 	else {
-
 	    maze[x][y] = '@';
-	    solve(x - 1, y);
-	    //maze[x][y] = '.';
-	    solve(x + 1, y);
-	    //maze[x][y] = '.';
-	    solve(x, y + 1);
-	    //maze[x][y] = '.';
-	    solve(x, y - 1);
+	    solve(x - 1, y); //left
+	    solve(x + 1, y); //right
+	    solve(x, y + 1); //down
+	    solve(x, y - 1); //up
 	    maze[x][y] = '.';	    
 	}
     }
