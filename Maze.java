@@ -121,7 +121,7 @@ class MazeSolver
 	    System.exit(0);
 	}
 	//other base case(s)...
-	else if ( x < 0 || x > = h || y < 0 || y > = w ) {	    
+	else if ( x < 0 || x >= 80 || y < 0 || y >= 25 ) {	    
 	}
 	else if ( maze[x][y] == '$' ) {
 	    solved = true;
